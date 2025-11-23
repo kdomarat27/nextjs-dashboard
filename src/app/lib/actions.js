@@ -27,5 +27,5 @@ export async function authenticate(prevState, formData) {
 }
 
 export async function logout() {
-  await signOut({ redirectTo: '/login' });
+  await signOut({ redirect: true, callbackUrl: '/login' });
 }
